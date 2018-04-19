@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <StartupObject>DiceGame</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ISSLIB.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ISSLIB.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ISSLIB">
+      <HintPath>ISSLIB.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

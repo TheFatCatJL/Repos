@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonBots", "CarrierBot\CommonBots.csproj", "{C5A486A2-A4A4-41C8-A521-FB2DBF4CDE5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5A486A2-A4A4-41C8-A521-FB2DBF4CDE5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A486A2-A4A4-41C8-A521-FB2DBF4CDE5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A486A2-A4A4-41C8-A521-FB2DBF4CDE5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A486A2-A4A4-41C8-A521-FB2DBF4CDE5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A4DA58F-6E43-4791-A855-80511E90031E}
+	EndGlobalSection
+EndGlobal

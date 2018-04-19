@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SA46Team09BModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AvailabilityCheck">
+          <Key>
+            <PropertyRef Name="EntryID" />
+          </Key>
+          <Property Name="EntryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransactionID" Type="int" Nullable="false" />
+          <Property Name="FacilityID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="BookingDate" Type="datetime" Nullable="false" />
+          <Property Name="TimeSlot" Type="int" Nullable="false" />
+          <Property Name="Activity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NUSID" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BookingTableInitialisation">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+          </Key>
+          <Property Name="Activity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NUSID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="TransDateTime" Type="datetime" Nullable="false" />
+          <Property Name="BookingDateTime" Type="datetime" Nullable="false" />
+          <Property Name="TransactionType" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="TransactionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TimeSlot" Type="int" Nullable="false" />
+          <Property Name="FacilityID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AvailableFlag" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FacilityInformation">
+          <Key>
+            <PropertyRef Name="FacilityID" />
+          </Key>
+          <Property Name="FacilityID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Activity" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="LocationTag" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Location" Type="nvarchar" MaxLength="255" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="NUSID" />
+          </Key>
+          <Property Name="NUSID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="MemberType" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Mobile" Type="int" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Transactions">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+          </Key>
+          <Property Name="TransactionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransactionType" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="NUSID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="FacilityID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Activity" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TransDateTime" Type="datetime" Nullable="false" />
+          <Property Name="BookingDateTime" Type="datetime" Nullable="false" />
+          <Property Name="TimeSlot" Type="int" Nullable="false" />
+          <Property Name="CancelRef" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="SA46Team09BModelStoreContainer">
+          <EntitySet Name="AvailabilityCheck" EntityType="Self.AvailabilityCheck" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BookingTableInitialisation" EntityType="Self.BookingTableInitialisation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FacilityInformation" EntityType="Self.FacilityInformation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transactions" EntityType="Self.Transactions" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SA46Team09BModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AvailabilityCheck">
+          <Key>
+            <PropertyRef Name="EntryID" />
+          </Key>
+          <Property Name="EntryID" Type="Int32" Nullable="false" />
+          <Property Name="TransactionID" Type="Int32" Nullable="false" />
+          <Property Name="FacilityID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BookingDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TimeSlot" Type="Int32" Nullable="false" />
+          <Property Name="Activity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NUSID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FacilityInformation">
+          <Key>
+            <PropertyRef Name="FacilityID" />
+          </Key>
+          <Property Name="FacilityID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Activity" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LocationTag" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="NUSID" />
+          </Key>
+          <Property Name="NUSID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MemberType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mobile" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+          </Key>
+          <Property Name="TransactionID" Type="Int32" Nullable="false" />
+          <Property Name="TransactionType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NUSID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FacilityID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Activity" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TransDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BookingDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TimeSlot" Type="Int32" Nullable="false" />
+          <Property Name="CancelRef" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="SA46Team09BEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AvailabilityChecks" EntityType="Self.AvailabilityCheck" />
+          <EntitySet Name="FacilityInformations" EntityType="Self.FacilityInformation" />
+          <EntitySet Name="Members" EntityType="Self.Member" />
+          <EntitySet Name="Transactions" EntityType="Self.Transaction" />
+          <EntitySet Name="BookingTableInitialisations" EntityType="SA46Team09BModel.BookingTableInitialisation" />
+        </EntityContainer>
+        <EntityType Name="BookingTableInitialisation">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+          </Key>
+          <Property Name="Activity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NUSID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TransDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BookingDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TransactionType" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TransactionID" Type="Int32" Nullable="false" />
+          <Property Name="TimeSlot" Type="Int32" Nullable="false" />
+          <Property Name="FacilityID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AvailableFlag" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SA46Team09BModelStoreContainer" CdmEntityContainer="SA46Team09BEntities">
+          <EntitySetMapping Name="AvailabilityChecks">
+            <EntityTypeMapping TypeName="SA46Team09BModel.AvailabilityCheck">
+              <MappingFragment StoreEntitySet="AvailabilityCheck">
+                <ScalarProperty Name="NUSID" ColumnName="NUSID" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="EntryID" ColumnName="EntryID" />
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+                <ScalarProperty Name="FacilityID" ColumnName="FacilityID" />
+                <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+                <ScalarProperty Name="TimeSlot" ColumnName="TimeSlot" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FacilityInformations">
+            <EntityTypeMapping TypeName="SA46Team09BModel.FacilityInformation">
+              <MappingFragment StoreEntitySet="FacilityInformation">
+                <ScalarProperty Name="FacilityID" ColumnName="FacilityID" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="LocationTag" ColumnName="LocationTag" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Members">
+            <EntityTypeMapping TypeName="SA46Team09BModel.Member">
+              <MappingFragment StoreEntitySet="Member">
+                <ScalarProperty Name="NUSID" ColumnName="NUSID" />
+                <ScalarProperty Name="MemberType" ColumnName="MemberType" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transactions">
+            <EntityTypeMapping TypeName="SA46Team09BModel.Transaction">
+              <MappingFragment StoreEntitySet="Transactions">
+                <ScalarProperty Name="CancelRef" ColumnName="CancelRef" />
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+                <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+                <ScalarProperty Name="NUSID" ColumnName="NUSID" />
+                <ScalarProperty Name="FacilityID" ColumnName="FacilityID" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="TransDateTime" ColumnName="TransDateTime" />
+                <ScalarProperty Name="BookingDateTime" ColumnName="BookingDateTime" />
+                <ScalarProperty Name="TimeSlot" ColumnName="TimeSlot" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookingTableInitialisations">
+            <EntityTypeMapping TypeName="SA46Team09BModel.BookingTableInitialisation">
+              <MappingFragment StoreEntitySet="BookingTableInitialisation">
+                <ScalarProperty Name="AvailableFlag" ColumnName="AvailableFlag" />
+                <ScalarProperty Name="FacilityID" ColumnName="FacilityID" />
+                <ScalarProperty Name="TimeSlot" ColumnName="TimeSlot" />
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+                <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+                <ScalarProperty Name="BookingDateTime" ColumnName="BookingDateTime" />
+                <ScalarProperty Name="TransDateTime" ColumnName="TransDateTime" />
+                <ScalarProperty Name="NUSID" ColumnName="NUSID" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
