@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="menuworkshop.menuex.MainActivity">
+    <item android:id="@+id/item1" android:title="@string/item1_value"
+        android:orderInCategory="101"/>
+    <item android:id="@+id/item2" android:title="@string/item2_value"
+        android:orderInCategory="102"/>
+    <item android:id="@+id/item3" android:title="@string/item3_value"
+        android:orderInCategory="103"/>
+    <item android:id="@+id/item4" android:title="@string/item4_value"
+        android:orderInCategory="104"/>
+    <item android:id="@+id/item5" android:title="@string/item5_value"
+        android:orderInCategory="105"/>
+</menu>

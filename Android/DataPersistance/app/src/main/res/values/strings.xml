@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DataPersistance</string>
+    <string name="username">username</string>
+    <string name="hostname">hostname</string>
+    <string name="run">run</string>
+    <string name="title_activity_launcher">Launcher</string>
+    <string name="item1_value">Shared Preferences</string>
+    <string name="item2_value">Read Write files</string>
+    <string name="item3_value">Network Activity</string>
+    <string name="item4_value">Save Instances</string>
+    <string name="textSI2" />
+    <string name="textSI1" />
+    <string name="address">1 Code Ave</string>
+    <string name="age">100</string>
+
+</resources>

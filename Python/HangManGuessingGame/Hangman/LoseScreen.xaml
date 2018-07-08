@@ -1,0 +1,8 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LoseScreen" Height="500" Width="468.421">
+    <Grid>
+        <MediaElement x:Name="Lose" HorizontalAlignment="Left" Height="215" Margin="74,29,0,0" VerticalAlignment="Top" Width="325" Source ="D:\Repos\HangManEngine\youlose.gif"/>
+        <Image HorizontalAlignment="Left" Height="74" Margin="110,260,0,0" VerticalAlignment="Top" Width="242" Source ="D:\Repos\HangManEngine\LoseIcon.jpg"/>
+    </Grid>
+</Window>

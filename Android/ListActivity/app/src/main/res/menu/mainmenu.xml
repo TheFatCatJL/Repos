@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inflate2"
+        android:title="Item">
+        <menu>
+            <item
+                android:id="@+id/list2"
+                android:title="Activity2" />
+            <item
+                android:id="@+id/list3"
+                android:title="Activity3" />
+            <item
+                android:id="@+id/list4"
+                android:title="Activity4" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/list1"
+        android:title="Activity1" />
+    <item
+        android:id="@+id/newsactivity"
+        android:title="News Activity" />
+    <item
+        android:id="@+id/newsactivity2"
+        android:title="News Activity Json" />
+    <item
+        android:id="@+id/empactivity"
+        android:title="Employee" />
+    <item
+        android:id="@+id/empactivity2"
+        android:title="Employee 2" />
+</menu>

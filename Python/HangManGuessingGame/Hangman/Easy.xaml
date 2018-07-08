@@ -1,0 +1,28 @@
+<Window 
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+       Title="Easy" Height="600" Width="400">
+    <Grid>
+        <Button x:Name="Button1" Content="A" HorizontalAlignment="Left" Margin="68,329,0,0" VerticalAlignment="Top" Width="60" Height="60" IsDefault="True" FontWeight="Bold" FontSize="30" Click="Button1_Click" />
+        <Button x:Name="Button2" Content="B" HorizontalAlignment="Left" Margin="133,329,0,0" VerticalAlignment="Top" Width="60" Height="60" IsDefault="True" FontWeight="Bold" FontSize="30" Click="Button2_Click"/>
+        <Button x:Name="Button6" Content="C" HorizontalAlignment="Left" Margin="133,394,0,0" VerticalAlignment="Top" Width="60" Height="60" IsDefault="True" FontWeight="Bold" FontSize="30" Click="Button6_Click"/>
+        <Button x:Name="Button10" Content="D" HorizontalAlignment="Left" Margin="133,459,0,0" VerticalAlignment="Top" Width="60" Height="60" IsDefault="True" FontWeight="Bold" FontSize="30" Click="Button10_Click"/>
+        <Button x:Name="Button5" Content="E" HorizontalAlignment="Left" Margin="68,394,0,0" VerticalAlignment="Top" Width="60" Height="60" IsDefault="True" FontWeight="Bold" FontSize="30" Click="Button5_Click"/>
+        <Button x:Name="Button3" Content="F" HorizontalAlignment="Left" Margin="198,329,0,0" VerticalAlignment="Top" Width="60" Height="60" IsDefault="True" FontWeight="Bold" FontSize="30" Click="Button3_Click"/>
+        <Button x:Name="Button4" Content="G" HorizontalAlignment="Left" Margin="263,329,0,0" VerticalAlignment="Top" Width="60" Height="60" IsDefault="True" FontWeight="Bold" FontSize="30" Click="Button4_Click"/>
+        <Button x:Name="Button7" Content="H" HorizontalAlignment="Left" Margin="198,394,0,0" VerticalAlignment="Top" Width="60" Height="60" IsDefault="True" FontWeight="Bold" FontSize="30" Click="Button7_Click"/>
+        <Button x:Name="Button8" Content="I" HorizontalAlignment="Left" Margin="263,394,0,0" VerticalAlignment="Top" Width="60" Height="60" IsDefault="True" FontWeight="Bold" FontSize="30" Click="Button8_Click"/>
+        <Button x:Name="Button9" Content="J" HorizontalAlignment="Left" Margin="68,459,0,0" VerticalAlignment="Top" Width="60" Height="60" IsDefault="True" FontWeight="Bold" FontSize="30" Click="Button9_Click"/>
+        <Button x:Name="Button11" Content="K" HorizontalAlignment="Left" Margin="198,459,0,0" VerticalAlignment="Top" Width="60" Height="60" IsDefault="True" FontWeight="Bold" FontSize="30" Click="Button11_Click"/>
+        <Button x:Name="Button12" Content="L" HorizontalAlignment="Left" Margin="263,459,0,0" VerticalAlignment="Top" Width="60" Height="60" IsDefault="True" FontWeight="Bold" FontSize="30" Click="Button12_Click"/>
+        <TextBox x:Name="T1" HorizontalAlignment="Left" Height="40" Margin="63,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" TextAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="20" Text="F"/>
+        <TextBox x:Name="T2" HorizontalAlignment="Left" Height="40" Margin="108,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" TextAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="20" Text="L"/>
+        <TextBox x:Name="T3" HorizontalAlignment="Left" Height="40" Margin="153,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Text="A"/>
+        <TextBox x:Name="T4" HorizontalAlignment="Left" Height="40" Margin="198,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" TextAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="20" Text="G"/>
+        <TextBox x:Name="T5" HorizontalAlignment="Left" Height="40" Margin="243,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="T6" HorizontalAlignment="Left" Height="40" Margin="288,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" TextAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="20" />
+        <Image x:Name="HangManStatus" HorizontalAlignment="Left" Height="180" Margin="44,54,0,0" VerticalAlignment="Top" Width="200" Source="D:\Repos\HangManEngine\HM5.jpg" Stretch="Fill"/>
+        <Label x:Name="LifeLabel" Content="0" Margin="276,101,0,0" VerticalAlignment="Top" FontSize="36" Width="65" Height="68" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" IsEnabledChanged="LifeLabel_IsEnabledChanged"/>
+        <Label Content="Life Left:" HorizontalAlignment="Left" Margin="261,54,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+    </Grid>
+</Window> 

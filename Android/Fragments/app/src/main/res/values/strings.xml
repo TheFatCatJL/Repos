@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Fragments</string>
+    <string name="item1">List with Detail</string>
+    <string name="item2">Pend</string>
+    <string name="item3">Pend</string>
+    <string name="item4">Pend</string>
+    <string name="item5">Pend</string>
+    <string name="item6">Pend</string>
+
+
+    <string name="cost">Cost</string>
+    <string name="description">Description</string>
+    <string name="id">ID</string>
+
+</resources>

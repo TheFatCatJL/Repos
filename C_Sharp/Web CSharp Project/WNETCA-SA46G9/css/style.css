@@ -1,0 +1,54 @@
+﻿.navbar-brand {
+    border: 1px solid;
+    padding: 1px 10px 3px 10px;
+    font-weight: 600;
+    color: #6BBAA7 !important;
+    border-radius: 5px !important;
+}
+
+.book-img {
+    text-align: center;
+}
+
+.card-body h4,p {
+    font-size: 16px;
+    color: #818182;
+}
+#ddl_cat{
+
+    height:30px;
+}
+.h-100 {
+    width: 250px;
+    min-height: 375px;
+}
+.card-body h5 {
+    font-size: 18px;
+}
+.pagination {
+    margin: auto;
+    padding: 10px 17px;
+}
+.product_view .modal-dialog {
+    max-width: 800px;
+    width: 100%;
+}
+
+.pre-cost {
+    text-decoration: line-through;
+    color: #a5a5a5;
+}
+
+.space-ten {
+    padding: 10px 0;
+}
+.card-dt{
+    margin-top:100px;
+    margin-bottom:150px !important;
+    padding:90px;
+}
+.back {
+    float:right;
+}
+@media only screen and (max-width: 480px) {
+}

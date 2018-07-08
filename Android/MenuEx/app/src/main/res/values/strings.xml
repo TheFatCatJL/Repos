@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MenuEx</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="item1_value">Alert Dialog</string>
+    <string name="item2_value">Custom Dialog</string>
+    <string name="item3_value">Progress Dialog</string>
+    <string name="item4_value">Converter</string>
+    <string name="item5_value">Converter2</string>
+
+    <string name="downarrow">↓</string>
+    <string name="uparrow">↑</string>
+
+    <string name="home">SGD$</string>
+    <string-array name="currencies">
+        <item>US</item>
+        <item>MYR</item>
+        <item>AUD</item>
+    </string-array>
+    <string-array name="currencyV">
+        <item>1.4</item>
+        <item>0.35</item>
+        <item>1.01</item>
+    </string-array>
+</resources>
